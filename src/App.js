@@ -1,8 +1,15 @@
 import React from 'react';
-import styled from 'styled-components'
-import Carrinho from '././Componentes/Carrinho/Carrinho'
-import Filtros from '././Componentes/Filtros/Filtros'
-// import CardProduto from '././CardProduto'
+import { CardProduto } from './Components/Produtos/CardProduto';
+import produtos from './Components/produtos.json'
+import styled from 'styled-components';
+
+const LayoutMenu = styled.div`
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+align-items: baseline;
+justify-items: center;
+`;
 
 const MainContainer = styled.div`
 display: flex;
@@ -10,17 +17,27 @@ justify-content: space-between;
 margin: 20px;
 height: 100vh;
 `
-class App extends React.Component {
-  render() {
-    return (
 
+class App extends React.Component {
+  state = {
+    produtos: produtos
+  }
+
+  render() {
+
+
+    return (
       <MainContainer>
-        <Filtros/>
-        <p>Produtos</p>
-        <Carrinho/>
+        {/* <Filtros /> */}
+        <LayoutMenu>
+          {this.state.produtos.map(produto => {
+            return <CardProduto key={produtos.id} produto={produto} />
+          })}
+
+        </LayoutMenu>
+        {/* <Carrinho /> */}
       </MainContainer>
     );
   }
 }
-
 export default App;
