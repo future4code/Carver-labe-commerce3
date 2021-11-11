@@ -19,7 +19,7 @@ class ItensCarrinho extends React.Component {
     return (
       <ItensContainer>
         {/* Aqui coloquei uma simulação da sintaxe que chama a quantidade de produtos e o nome deles*/}
-        {/* <p>{this.props.CardProduto.quantidade}x</p>  */}
+        {/* <p>{}x</p>  */}
         {/* <p>{this.props.CardProduto.nome}</p> */}
         {/* Aqui precisa descobrir a sintaxe para remoção de item (rever aulas sobre exclusão) */}
         <button onClick = {} >Remover</button>
