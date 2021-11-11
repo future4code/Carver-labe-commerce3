@@ -47,8 +47,12 @@ class App extends React.Component {
   }
 
   // adicionaItemCarrinho = (event) => {
-  //   this.setState({carrinho: event.target})
+  //   this.setState({carrinho: event.target.value})
   // }
+
+  deletaItemCarrinho = (event) => {
+    this.setState({carrinho: event.target.value})
+  }
 
   render() {
 
@@ -84,7 +88,7 @@ class App extends React.Component {
           })}
         </div>
 
-        <Carrinho />
+        <Carrinho/>
       </MainContainer>
     );
   }
