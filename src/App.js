@@ -1,5 +1,5 @@
 import React from 'react';
-import {CardProduto} from './Components/Produtos/CardProduto';
+import { CardProduto } from './Components/Produtos/CardProduto';
 import produtos from './Components/produtos.json'
 import styled from 'styled-components';
 
@@ -11,21 +11,33 @@ align-items: baseline;
 justify-items: center;
 `;
 
+
+const MainContainer = styled.div`
+display: flex;
+justify-content: space-between;
+margin: 20px;
+height: 100vh;
+`
+
 class App extends React.Component {
   state = {
     produtos: produtos
   }
 
   render() {
-    
+
 
     return (
-      <LayoutMenu>
+      <MainContainer>
+        <Filtros />
+        <LayoutMenu>
           {this.state.produtos.map(produto => {
             return <CardProduto key={produtos.id} produto={produto} />
           })}
-        
-      </LayoutMenu>
+
+        </LayoutMenu>
+        <Carrinho />
+      </MainContainer>
     );
   }
 }
