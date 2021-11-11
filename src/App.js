@@ -11,7 +11,6 @@ align-items: baseline;
 justify-items: center;
 `;
 
-
 const MainContainer = styled.div`
 display: flex;
 justify-content: space-between;
@@ -29,14 +28,14 @@ class App extends React.Component {
 
     return (
       <MainContainer>
-        <Filtros />
+        {/* <Filtros /> */}
         <LayoutMenu>
           {this.state.produtos.map(produto => {
             return <CardProduto key={produtos.id} produto={produto} />
           })}
 
         </LayoutMenu>
-        <Carrinho />
+        {/* <Carrinho /> */}
       </MainContainer>
     );
   }
