@@ -1,7 +1,9 @@
 import React from 'react';
-import { CardProduto } from './Components/Produtos/CardProduto';
-import produtos from './Components/produtos.json'
+import CardProduto  from './Components/CardProduto';
 import styled from 'styled-components';
+import Carrinho from './Components/Carrinho';
+import Filtros from './Components/Filtros';
+
 
 const LayoutMenu = styled.div`
 display:grid;
@@ -19,23 +21,18 @@ height: 100vh;
 `
 
 class App extends React.Component {
-  state = {
-    produtos: produtos
-  }
+ 
 
   render() {
 
 
     return (
       <MainContainer>
-        {/* <Filtros /> */}
+        <Filtros />
         <LayoutMenu>
-          {this.state.produtos.map(produto => {
-            return <CardProduto key={produtos.id} produto={produto} />
-          })}
-
+          <CardProduto/>
         </LayoutMenu>
-        {/* <Carrinho /> */}
+        <Carrinho />
       </MainContainer>
     );
   }

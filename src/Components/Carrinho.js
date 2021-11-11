@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
-import ItensCarrinho from './ItensCarrinho'
 // import CardProduto from '././CardProduto'
-
+import App from '../App';
 
 const TotalCarrinho = styled.div`
 border: 1px solid black;
@@ -32,7 +31,14 @@ class Carrinho extends React.Component {
     return (
       <TotalCarrinho>
         <h3>Carrinho:</h3>
-        <ItensCarrinho/>
+        {/* {this.state.carrinho.map(produto =>{
+          return (
+          <div>
+            <p>{produto.nome}</p>
+          </div>
+          )
+        })} */}
+        {/* <ItensCarrinho/> */}
         {/* Aqui chamei a funcao do for para aparcer o total na frente da frase */}
         {/* <p>Valor Total: R${this.pegarValorTotal()},00</p> */}
       </TotalCarrinho>
