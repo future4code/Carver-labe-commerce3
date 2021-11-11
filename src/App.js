@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import Carrinho from '././Componentes/Carrinho/Carrinho'
 import Filtros from '././Componentes/Filtros/Filtros'
+// import CardProduto from '././CardProduto'
 
 const MainContainer = styled.div`
 display: flex;
