@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
-// import CardProduto from '././CardProduto'
+import styled from 'styled-components';
 
 // Aqui estilizei o box onde ficam as quantidades dos itens e o botão para que apareçam em linha
 const ItensContainer = styled.div`
@@ -15,16 +14,15 @@ p {
 
 class ItensCarrinho extends React.Component {
 
-
   render() {
 
     return (
       <ItensContainer>
         {/* Aqui coloquei uma simulação da sintaxe que chama a quantidade de produtos e o nome deles*/}
-        {/* <p>{this.props.cardProduto.quantidade}x</p> 
-        <p>{this.props.cardProduto.nome}</p> */}
+        {/* <p>{this.props.CardProduto.quantidade}x</p>  */}
+        {/* <p>{this.props.CardProduto.nome}</p> */}
         {/* Aqui precisa descobrir a sintaxe para remoção de item (rever aulas sobre exclusão) */}
-        <button>Remover</button>
+        <button onClick = {} >Remover</button>
       </ItensContainer>
     );
   }

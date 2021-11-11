@@ -1,7 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
-import ItensCarrinho from './ItensCarrinho'
-// import CardProduto from '././CardProduto'
+import styled from 'styled-components';
+import ItensCarrinho from './ItensCarrinho';
 
 
 const TotalCarrinho = styled.div`
@@ -16,11 +15,12 @@ padding: 5px;
 class Carrinho extends React.Component {
 
   // Aqui usei a sintaxe for para calcular o preco x quantidade e retornar um total simulando que esses foram os termos usados no arquivo Produtos
+  
   // pegarValorTotal = () => {
   //   let valorTotal = 0
 
-  //   for(let produto of this.props.cardProdutos) {
-  //     valorTotal += produto.preco * produto.quantidade
+  //   for(let produto of this.props.CardProdutos) {
+  //     valorTotal += produto.valor * produto.quantidade
   //   }
 
   //   return valorTotal
