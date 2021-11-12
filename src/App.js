@@ -1,13 +1,24 @@
 import React from 'react';
-import CardProduto from './Components/Produtos/CardProduto';
+// import CardProduto from './Components/Produtos/CardProduto';
 import Carrinho from '././Components/Carrinho/Carrinho';
 import Filtros from '././Components/Filtros/Filtros';
 import styled from 'styled-components';
 
 const ProdContainer = styled.div `
 border: 1px solid black;
-
+display: flex;
+flex-direction: column;
+img{
+  width: 100%,
+}
 `
+const ContainerCentro = styled.div`
+display: grid;
+grid-template-columns: repeat(3, 200px);
+grid-template-rows: repeat(2, 200px);
+gap: 8px;
+`
+
 const MainContainer = styled.div`
 display: flex;
 justify-content: space-between;
@@ -113,9 +124,10 @@ class App extends React.Component {
           atualizaBuscaProduto={this.atualizaBuscaProduto}
           atualizaOrdem={this.atualizaOrdem}
         />
-
         
-        <p>Produtos</p>
+      <ContainerCentro>
+      {produtos}
+      </ContainerCentro>
 
         <Carrinho />
       </MainContainer>
