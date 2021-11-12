@@ -31,11 +31,18 @@ class Carrinho extends React.Component {
 
 
   render() {
-
+    const carrinho = this.props.itensCarrinho.map((produto)=>{
+      return (
+        <ItensCarrinho 
+          carrinho={produto.nome}
+        />
+      )
+    })
+    console.log(this.props)
     return (
       <TotalCarrinho>
         <h3>Carrinho:</h3>
-        <ItensCarrinho />
+        {carrinho}
         {/* Aqui chamei a funcao do for para aparcer o total na frente da frase */}
         {/* <p>Valor Total: R${this.pegarValorTotal()},00</p> */}
       </TotalCarrinho>
