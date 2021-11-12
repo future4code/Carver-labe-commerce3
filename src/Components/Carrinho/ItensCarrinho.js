@@ -22,7 +22,7 @@ class ItensCarrinho extends React.Component {
         {/* <p>{}x</p>  */}
         {/* <p>{this.props.CardProduto.nome}</p> */}
         {/* Aqui precisa descobrir a sintaxe para remoção de item (rever aulas sobre exclusão) */}
-        <button onClick = {} >Remover</button>
+        {/* <button onClick = {} >Remover</button> */}
       </ItensContainer>
     );
   }
