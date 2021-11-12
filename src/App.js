@@ -4,7 +4,7 @@ import Carrinho from '././Components/Carrinho/Carrinho';
 import Filtros from '././Components/Filtros/Filtros';
 import styled from 'styled-components';
 
-const ProdContainer = styled.div `
+const ProdContainer = styled.div`
 border: 1px solid black;
 display: flex;
 flex-direction: column;
@@ -76,7 +76,7 @@ class App extends React.Component {
     valorMinimo: "",
     valorMaximo: "",
     buscaProduto: "",
-    ordem: "",
+    ordem: 1,
     // itensNoCarrinho: []
   }
 
@@ -93,24 +93,37 @@ class App extends React.Component {
   }
 
   atualizaOrdem = (event) => {
-    this.setState({ order: event.target.value })
+    this.setState({ ordem: event.target.value })
   }
 
   render() {
 
-    const produtos = listaDeProdutos.map((produto)=> {
-      return <ProdContainer>
-      <img src={produto.imagem}/>
-      <div>
-        <p>{produto.nome}</p>
-        <p>R${produto.valor},00</p>
-        <button>
-          Adicionar ao carrinho
-        </button>
-      </div>
-    </ProdContainer>
-    })
-    
+    const produtos = listaDeProdutos
+      .filter(produto => {
+        return produto.nome.toLowerCase().includes(this.state.buscaProduto.toLowerCase())
+      })
+      .filter(produto =>{
+        return this.state.valorMinimo === "" || produto.valor >= this.state.valorMinimo
+      })
+      .filter(produto =>{
+        return this.state.valorMaximo === "" || produto.valor <= this.state.valorMaximo
+      })
+      .sort((a,b) => {
+        return this.state.ordem * a.valor - b.valor
+      })
+      .map((produto) => {
+        return <ProdContainer>
+          <img src={produto.imagem} />
+          <div>
+            <p>{produto.nome}</p>
+            <p>R${produto.valor},00</p>
+            <button>
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </ProdContainer>
+      })
+
     return (
       <MainContainer>
 
@@ -124,12 +137,14 @@ class App extends React.Component {
           atualizaBuscaProduto={this.atualizaBuscaProduto}
           atualizaOrdem={this.atualizaOrdem}
         />
-        
-      <ContainerCentro>
-      {produtos}
-      </ContainerCentro>
 
-        <Carrinho />
+        <ContainerCentro>
+          {produtos}
+        </ContainerCentro>
+
+        <Carrinho
+        
+        />
       </MainContainer>
     );
   }

@@ -40,18 +40,17 @@ class Filtros extends React.Component {
         <input
           type="text"
           value={this.props.buscaProduto}
-          onChange={this.props.atualizaCampo} />
+          onChange={this.props.atualizaBuscaProduto} />
         
           <label>Ordenação:</label>
           <select
             name= "order"
-            value={this.props.order}
+            value={this.props.ordem}
             onChange={this.props.atualizaOrdem}
           >
             <option value={1}>Crescente</option>
             <option value={-1}>Decrescente</option>
           </select>
-        
       </OpcoesFiltro>
 
     );

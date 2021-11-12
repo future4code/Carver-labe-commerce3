@@ -19,8 +19,8 @@ class Carrinho extends React.Component {
   // pegarValorTotal = () => {
   //   let valorTotal = 0
 
-  //   for(let produto of this.props.CardProdutos) {
-  //     valorTotal += produto.valor * produto.quantidade
+  //   for(let produto of this.props.produtos) {
+  //     valorTotal = produto.valor
   //   }
 
   //   return valorTotal
@@ -34,7 +34,7 @@ class Carrinho extends React.Component {
         <h3>Carrinho:</h3>
         <ItensCarrinho/>
         {/* Aqui chamei a funcao do for para aparcer o total na frente da frase */}
-        {/* <p>Valor Total: R${this.pegarValorTotal()},00</p> */}
+        <p>Valor Total: R$,00</p>
       </TotalCarrinho>
     );
   }
