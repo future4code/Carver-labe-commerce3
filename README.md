@@ -1,4 +1,4 @@
-***LAB E-COMMERCE DE BRINQUEDOS ESPACIAIS 🚀🚀🚀 
+# LAB E-COMMERCE DE BRINQUEDOS ESPACIAIS 🚀🚀🚀 
 
 Nosso projeto é a criação de um e-commerce com tema galático. Criamos uma lojinha de brinquedos e roupa/fantasia de criança.
 
