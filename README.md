@@ -8,4 +8,4 @@ Nossos produtos são adicionados ao carrinho através do botão no card do produ
 
 Para visitar nossa lojinha clique em http://greedy-test.surge.sh/
 
-Integrantes: Karen Alves e Thamires Lipelt
+Integrantes: Karen Alves e Thamires Lippelt
